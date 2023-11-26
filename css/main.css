@@ -1,0 +1,98 @@
+/*  لازم دايما الخط احطه من اول ما ابلش شغل , استدعاء خط*/
+@import url("https://fonts.googleapis.com/css2?family=Bitter:wght@500&family=Inter&display=swap");
+
+/* public*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #eee;
+  font-family: "poppins", sans-serif; /* poppins اكثر استخداما*/
+  height: 666666px; /* عملته طول ورقم كبير عشان يصير عندي سكرول يعني يطلع وينزل */
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+/*-------------------------------------------------------------------------------------------------------------------------*/
+header {
+  position: fixed; /* عشان تنزل معي ال navbar */
+  width: 100%; /*  لو بدونها رح يخرب وهيك بحل المشكله*/
+  top: 0; /* تكون ملزقه فوق فش فراغات*/
+  z-index: 9; /*   عشان لو اجى اشي تاني الو بوزيشين تاني ما يخرب وهيك رقم 9 اعلى شي يعني هاي حضل دايما فوق وهي اهم شي*/
+  box-shadow: 0px 1.64744px 8.2372px 0px rgb(0, 0, 0, 0.1);
+  padding: 20px 0px;
+}
+
+.contanier {
+  width: calc(100% - 120px);
+  margin: auto;
+}
+
+.row {
+  display: flex; /* العناصر جنب بعض */
+  justify-content: space-between; /* قسمت العناصر واحد على الطرف اليمين واحد على اخر اليسار وواحد بالتص*/
+  align-items: center; /*   الحكي يصير بنص الديف يعني من فوق ومن تحت يصير قي قراغ تساوي ما يكون ملزق براس الصفحه فوق*/
+  flex-wrap: wrap; /*  عشان لو تغيرت الشاشه وصغرت ينزلوا العناصر لتحت مش يختفوا  , بتساعدني بال responsive*/
+}
+.active {
+  font-weight: 800;
+}
+/*______________________logo___________________________________________*/
+header .logo {
+  display: flex; /*   عشان الحكي والصوره يكونوا بحد بعض منيح*/
+  align-items: center; /* عشان الحكي الي بحد الصوره يكون بالنص*/
+  gap: 10px; /* مسافه بسيطه بين الحكي والصوره*/
+}
+
+header .logo img {
+  width: 45px;
+}
+
+header .logo a {
+  color: #545be8;
+}
+/* ______________________navbar________________________________*/
+
+header nav ul {
+  display: flex; /*  عشان كل عناصر الليست يصيروا حد بعض */
+
+  gap: 16px; /* عملت مسافه بين الكلمات عشان ما يلزقوا ببعض وهي احسن من المارجن لانو بالمارجن رح يبعد كمان عن الاطراف فرح اضيع كمان مسافه عندي وتبطل مستخدمه ومستفيدمنها لعيك gap hpsk*/
+  flex-wrap: wrap;
+}
+header nav ul li a {
+  color: #101928;
+}
+
+/* _______________________authentication_________________-_______________*/
+header .auth {
+  /* auth=authentication*/
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+header .auth a {
+  padding: 5.354px 30px;
+  border-radius: 15px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+header .auth .login {
+  color: #545be8;
+  border: 2px solid #545beb; /* عملت المستطيل الي بحاوط الكلمه */
+}
+
+header .auth .register {
+  background-color: #545be8;
+  color: #fff;
+}
+/*_______________________________________________________________________________________________________________*/
